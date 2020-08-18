@@ -176,13 +176,13 @@ p{
     padding: 10px;
 }
 
-#newsletter input[type='button']{
+#newsletter input[type='submit']{
     background: #fff;
     outline: none;
     border: none;
     border-radius: 2px;
 }
-#newsletter input[type='button']:hover{
+#newsletter input[type='submit']:hover{
     color: rgb(255, 0, 0);
 }
 
