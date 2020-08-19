@@ -91,9 +91,11 @@ p{
 }
 #profile .info-img{
     float: right;
-    width: 36%;
-    background:url('../img/ekeso.jpg') no-repeat;
+    width: 30%;
+    background:url('../img/ekeso.jpg') no-repeat center center/cover;
+    border-radius: 50%;
     min-height: 100%;
+    margin-right:100px;
 }
 #profile .info{
     float: left;
@@ -116,7 +118,7 @@ p{
 }
 
 #profile h1#main-name{
-    color: rgb(255, 0, 0);
+    color: rgba(177, 16, 16, 0.945);
 }
 
 #info{
