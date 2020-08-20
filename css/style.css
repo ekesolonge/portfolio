@@ -233,3 +233,55 @@ p {
   font-size: xx-small;
   text-align: center;
 }
+
+/* Contact Page */
+.contact-flex {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 520px;
+  justify-content: space-evenly;
+  padding-top: 40px;
+}
+
+.socials-container{
+  width: 500px;
+  padding: 40px;
+}
+.socials {
+  text-align: center;
+}
+.socials a{
+  display: block;
+  margin-top: 20px;
+}
+
+.contact-me {
+  text-align: center;
+}
+.form-container {
+  width: 500px;
+  padding: 40px;
+}
+.form-container div {
+  margin-bottom: 40px;
+}
+.form-container input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+  border: solid 1px #ddd;
+}
+.submit {
+  background: rgba(177, 16, 16, 0.945);
+  padding: 15px 0px;
+  width: 30%;
+  border: 0;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.submit:hover{
+  background:rgb(255, 0, 0);
+}
