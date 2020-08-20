@@ -10,12 +10,11 @@
   font-family: Poppins;
   src: url(./fonts/Poppins/Poppins-Regular.ttf);
 }
-html,
-body {
+html,body{
   font-family: "Poppins", sans-serif;
   line-height: 1.3em;
+  background: pink;
 }
-
 a {
   color: black;
   text-decoration: none;
@@ -152,49 +151,99 @@ p {
   background: rgb(255, 0, 0);
 }
 
+/* About */
+#pro {
+  height: 520px;
+}
+#pro .info-img {
+  float: right;
+  width: 30%;
+  background: url("../img/ekeso.jpg") no-repeat center center/cover;
+  border-radius: 50%;
+  min-height: 100%;
+  margin-right: 100px;
+}
+#pro .info {
+  float: left;
+  width: 55%;
+  height: 100%;
+  text-align: justify;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+#pro .info ul {
+  padding-left: 40px;
+}
+
+#pro h1 {
+  margin-top: 100px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+#pro h1#main-name {
+  color: rgba(177, 16, 16, 0.945);
+}
+
+#info {
+  float: left;
+}
+#info ul {
+  margin-left: 40px;
+}
+#pro img {
+  float: right;
+  overflow: auto;
+  width: 29%;
+}
+
+#pro a {
+  background: #fff;
+  color: #fff;
+  background: rgba(177, 16, 16, 0.945);
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#pro a:hover {
+  background: rgb(255, 0, 0);
+}
 /* Footer */
 #footer {
-  height: 170px;
   background: rgba(177, 16, 16, 0.945);
   color: #fff;
   overflow: auto;
   padding: 10px;
+   width:100%;
 }
 
 #contact {
   float: left;
-  padding-bottom: 10px;
   width: 50%;
 }
 
-#contact ul {
-  float: left;
-  list-style-type: none;
+.social-foot{
+  text-align: center;
 }
 
-#contact li {
-  float: left;
-  list-style-type: none;
+#contact .social-foot h4{
+  text-align: center;
+  padding:1px;
+  margin-bottom: 10px;
 }
 
-#contact ul li a {
-  display: block;
-  padding: 10px;
-}
-
-.navbar ul li a {
-  display: block;
-  padding: 20px;
-}
-
-#contact img {
-  width: 30px;
+#contact .social-foot a{
+  color: #ffffff;
 }
 
 #newsletter {
   float: right;
-  width: 50%;
-  padding-left: 50px;
+  width: 50%;  
+  text-align: center;
 }
 
 #newsletter h4 {
@@ -211,7 +260,8 @@ p {
 #newsletter form {
   width: 50%;
   margin: auto;
-  padding-left: 40px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 #newsletter input {
@@ -239,8 +289,9 @@ p {
   display: flex;
   flex-wrap: nowrap;
   height: 520px;
-  justify-content: space-evenly;
   padding-top: 20px;
+  justify-content: space-around;
+  overflow: hidden;
 }
 .contact-flex h2{
   margin-bottom: 40px;
@@ -249,10 +300,9 @@ p {
 .socials-container{
   width: 500px;
 }
-
 .socials a{
   display: block;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .contact-me {
