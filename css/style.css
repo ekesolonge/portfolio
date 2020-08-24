@@ -327,7 +327,14 @@ p {
 }
 .projects .container .box-container .box{
   text-align: center;
-  width: 300px;
+  width: 320px;
+  margin: 20px 0px;
+}
+.projects .container .box-container .box p{
+  font-size:11px;
+}
+.projects .container .box-container .box a:hover{
+  color: rgba(177, 16, 16, 0.945);
 }
 .projects .container .box-container .box img{
   width: 200px;
