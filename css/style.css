@@ -332,6 +332,7 @@ p {
 }
 .projects .container .box-container .box p{
   font-size:11px;
+  padding-left: 0;
 }
 .projects .container .box-container .box a:hover{
   color: rgba(177, 16, 16, 0.945);
