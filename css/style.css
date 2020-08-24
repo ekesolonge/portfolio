@@ -37,7 +37,7 @@ p {
 .container {
   margin: auto;
   max-width: 1000px;
-  overflow: auto;
+  overflow: hidden;
   padding: 0 20px;
 }
 .footer-container {
@@ -92,6 +92,7 @@ p {
 /* Profile */
 #profile {
   height: 520px;
+  margin: 20px auto;
 }
 #profile .info-img {
   float: right;
@@ -154,6 +155,7 @@ p {
 /* About */
 #pro {
   height: 520px;
+  margin: 20px auto;
 }
 #pro .info-img {
   float: right;
@@ -333,4 +335,29 @@ p {
 }
 .submit:hover{
   background:rgb(255, 0, 0);
+}
+
+/* Projects Section */
+.projects .container{
+  margin: 50px auto;
+}
+.projects .container .box a h2:hover{
+  color: rgba(177, 16, 16, 0.945);
+}
+.projects .container h1#main-name{
+  color: rgba(177, 16, 16, 0.945);
+  text-align: center;
+}
+.projects .container .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.projects .container .box-container .box{
+  text-align: center;
+  width: 300px;
+}
+.projects .container .box-container .box img{
+  width: 200px;
 }
