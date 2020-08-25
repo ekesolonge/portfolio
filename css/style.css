@@ -10,10 +10,11 @@
   font-family: Poppins;
   src: url(./fonts/Poppins/Poppins-Regular.ttf);
 }
-html,body{
+html,
+body {
   font-family: "Poppins", sans-serif;
   line-height: 1.3em;
-  background: pink;
+  scroll-behavior: smooth;
 }
 a {
   color: black;
@@ -89,60 +90,143 @@ p {
   color: rgb(255, 0, 0);
 }
 
-/* Profile */
+/* Home Page */
 #profile {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 520px;
+  height: 100vh;
 }
-#profile .info{
+#profile::before {
+  content: "";
+  background: url(../img/home.jpg) no-repeat center center/cover;
+  position: absolute;
+  opacity: 0.9;
+  top: 4;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#profile .info {
   text-align: center;
 }
 #profile h1 {
-  font-size: 50px;
+  font-size: 5rem;
   font-weight: 700;
+  text-shadow: 0.4rem 0.4rem 0.1rem rgba(177, 16, 16, 0.945);
 }
 
 #profile h1#main-name {
-  color: rgba(177, 16, 16, 0.945);
+  color: whitesmoke;
+  animation: fadeIn 4s ease forwards;
 }
-#profile .info h2{
-  margin:10px;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#profile .info h3 {
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+}
+#profile .info #field {
+  animation: slidein 3s ease forwards;
+  opacity: 0;
+  overflow: hidden;
+}
+@keyframes slidein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    margin-left: 9rem;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #profile a {
   background: #fff;
+  display: inline-block;
   color: #fff;
   background: rgba(177, 16, 16, 0.945);
   border-radius: 2px;
   padding: 10px;
+  margin: 0 10px;
   cursor: pointer;
-  transition: all 1s ease;
+  opacity: 0;
+  animation: fadeIn 3s 2.9s ease forwards;
 }
 #profile a:hover {
   background: rgb(255, 0, 0);
 }
 
+/* What I do */
+#what {
+  background: pink;
+  padding: 20px;
+}
+h1.heading {
+  text-align: center;
+  color: rgba(177, 16, 16, 0.945);
+  font-size: 50px;
+  font-weight: 700;
+}
+.whats{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 1.5rem;
+   margin: 40px;
+   height: max-content;
+}
+.whatbox{
+  background: rgb(255, 124, 146);
+  border-radius: 20px;
+  text-align: center;
+  padding: 1rem;
+}
+.whatbox h2{
+  font-size: 30px;
+  margin: 1rem;
+}
+.whatbox >a{
+  margin: 2rem;
+}
+.whatbox >a>img{
+  width: 90px;
+}
 /* About */
 #pro {
-  height: 520px;
-  margin: 20px auto;
+  height: 90vh;
+  padding: 20px auto;
+  background: pink;
 }
+
 #pro .info-img {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
   float: right;
-  width: 30%;
-  background: url("../img/ekeso.jpg") no-repeat center center/cover;
+  width: 50%;
+  height: 100%;
+}
+#pro .info-img img{
+  height: 100%;
+  width: 70%;
   border-radius: 50%;
-  min-height: 100%;
-  margin-right: 100px;
 }
 #pro .info {
   float: left;
-  width: 55%;
+  width: 50%;
   height: 100%;
   text-align: justify;
   padding: 0 30px;
-  overflow: hidden;
 }
 
 #pro .info ul {
@@ -165,11 +249,6 @@ p {
 #info ul {
   margin-left: 40px;
 }
-#pro img {
-  float: right;
-  overflow: auto;
-  width: 29%;
-}
 
 #pro a {
   background: #fff;
@@ -189,9 +268,7 @@ p {
 #footer {
   background: rgba(177, 16, 16, 0.945);
   color: #fff;
-  overflow: auto;
   padding: 10px;
-   width:100%;
 }
 
 #contact {
@@ -199,23 +276,23 @@ p {
   width: 50%;
 }
 
-.social-foot{
+.social-foot {
   text-align: center;
 }
 
-#contact .social-foot h4{
+#contact .social-foot h4 {
   text-align: center;
-  padding:1px;
+  padding: 1px;
   margin-bottom: 10px;
 }
 
-#contact .social-foot a{
+#contact .social-foot a {
   color: #ffffff;
 }
 
 #newsletter {
   float: right;
-  width: 50%;  
+  width: 50%;
   text-align: center;
 }
 
@@ -265,15 +342,16 @@ p {
   padding-top: 20px;
   justify-content: space-around;
   overflow: hidden;
+  background: pink;
 }
-.contact-flex h2{
+.contact-flex h2 {
   margin-bottom: 40px;
 }
 
-.socials-container{
+.socials-container {
   width: 500px;
 }
-.socials a{
+.socials a {
   display: block;
   margin-top: 20px;
 }
@@ -285,9 +363,10 @@ p {
   width: 500px;
 }
 .form-container div {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-.form-container input {
+.form-container input,
+textarea {
   padding: 10px;
   width: 80%;
   border-radius: 3px;
@@ -304,45 +383,48 @@ p {
   font-size: 16px;
   cursor: pointer;
 }
-.submit:hover{
-  background:rgb(255, 0, 0);
+.submit:hover {
+  background: rgb(255, 0, 0);
 }
 
 /* Projects Section */
-.projects .container{
-  margin: 50px auto;
+.projects {
+  background: pink;
 }
-.projects .container .box a h3:hover{
+.projects .container {
+  padding: 50px auto;
+}
+.projects .container .box a h3:hover {
   color: rgba(177, 16, 16, 0.945);
 }
-.projects .container h1#main-name{
+.projects .container h1#main-name {
   color: rgba(177, 16, 16, 0.945);
   text-align: center;
 }
-.projects .container .box-container{
+.projects .container .box-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
-.projects .container .box-container .box{
+.projects .container .box-container .box {
   text-align: center;
   width: 320px;
   margin: 20px 0px;
 }
-.projects .container .box-container .box p{
-  font-size:11px;
+.projects .container .box-container .box p {
+  font-size: 11px;
   padding-left: 0;
 }
-.projects .container .box-container .box a:hover{
+.projects .container .box-container .box a:hover {
   color: rgba(177, 16, 16, 0.945);
 }
-.projects .container .box-container .box img{
+.projects .container .box-container .box img {
   width: 200px;
   transition: all 0.4s ease;
   opacity: 0.7;
 }
-.projects .container .box-container .box img:hover{
+.projects .container .box-container .box img:hover {
   opacity: 1;
   width: 216px;
 }
