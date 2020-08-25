@@ -171,6 +171,7 @@ p {
 #what {
   background: pink;
   padding: 20px;
+  border-bottom: dotted 1px rgb(255, 0, 0);
 }
 h1.heading {
   text-align: center;
@@ -201,6 +202,36 @@ h1.heading {
 .whatbox >a>img{
   width: 90px;
 }
+
+/* Testimonials */
+.testimonials{
+  background: pink;
+  padding: 20px;
+}
+.testimonials .item{
+  text-align: center;
+  padding: 20px;
+  background: rgb(255, 124, 146);
+  border-radius: 20px;
+}
+.testimonials .item img{
+  width: 200px;
+  border-radius: 50%;
+}
+.testimonials .item ul{
+  list-style-type: none;
+}
+.testimonials .item .list{
+  margin-bottom: 20px;
+}
+.testimonials .item .list li{
+  display: inline-block;
+}
+.testimonials .item .list li a img{
+  width: 14px;
+}
+
+
 /* About */
 #pro {
   height: 90vh;
