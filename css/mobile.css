@@ -151,4 +151,10 @@
 .whatbox{
   padding: 0;
 }
+
+/* Testimonials */
+.testimonial-list{
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+}
 }
