@@ -311,6 +311,7 @@ p {
 /* Projects Section */
 .projects .container{
   margin: 50px auto;
+  height: 520px;
 }
 .projects .container .box a h3:hover{
   color: rgba(177, 16, 16, 0.945);
@@ -339,8 +340,8 @@ p {
 }
 .projects .container .box-container .box img{
   width: 200px;
-  transition: all 1s ease;
-  opacity: 0.7;
+  transition: all 0.5s ease;
+  opacity: 0.6;
 }
 .projects .container .box-container .box img:hover{
   opacity: 1;
