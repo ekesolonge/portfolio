@@ -458,7 +458,6 @@ h1.heading {
 /* Contact Page */
 .contact-container{
   background: pink;
-  height: 90vh;
 }
 .contact-flex {
   display: flex; 
@@ -472,7 +471,6 @@ h1.heading {
 }
 .socials{
   width: 50%;
-  margin-left: 100px;
 }
 .contact-me{
   width: 50%;
@@ -481,8 +479,13 @@ h1.heading {
 .socials-container {
   width: 100%;
 }
+.socials-container h2{
+  text-align: center;
+}
 .socials a {
   display: block;
+  margin: 0 auto;
+  width: 250px;
   margin-top: 20px;
 }
 
