@@ -190,7 +190,7 @@ h1.heading {
   background: rgb(255, 124, 146);
   border-radius: 20px;
   text-align: center;
-  padding: 4rem;
+  padding: 2rem;
 }
 .whatbox h2{
   font-size: 30px;
@@ -215,6 +215,8 @@ h1.heading {
 }
 .testimonials .item{
   text-align: center;
+}
+.testimonialall{  
   padding: 3rem;
   background: rgb(255, 124, 146);
   border-radius: 20px;
