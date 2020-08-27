@@ -26,9 +26,6 @@ h2,
 h3 {
   padding: 20px;
 }
-p {
-  padding-left: 20px;
-}
 
 .clr {
   clear: both;
@@ -301,6 +298,9 @@ h1.heading {
   background: rgb(255, 124, 146);
   border-radius: 20px;
 }
+.list p{  
+  padding-left: 0px;
+}
 .testimonials .item img{
   width: 200px;
   border-radius: 50%;
@@ -324,6 +324,9 @@ h1.heading {
   height: 90vh;
   padding: 20px auto;
   background: pink;
+}
+#pro .info .about p{
+  padding-left: 20px;
 }
 
 #pro .info-img {
