@@ -34,12 +34,15 @@
     flex: 1;
   }
   .nav-list{
-    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: all 1.2s ease;
     width: 100%;
   }
   
   .nav-list.show{
-    display: unset;
+    height: 111.2px;
+    transition: all 1.2s ease;
   }
 
   /* Hamburger Button */
@@ -152,15 +155,22 @@
 }
   .socials{
       text-align: center;
+      margin-left: unset;
+      width: 100%;
+
   }
   .contact-me{
       border-top: dashed 1px rgba(177, 16, 16, 0.945);
+      width: 100%;
   }
   .form-container input, textarea {
     padding: 5px;
     width: 50%;
 }
 /* Projects Section */
+.projects{
+  height: unset;
+}
 .projects .container{
   padding: 20px auto;
 }
@@ -180,6 +190,16 @@
 }
 .whatbox{
   padding: 0;
+}
+.whatbox img{
+  max-width: 80px;
+}
+
+h1.heading {
+  text-align: center;
+  color: rgba(177, 16, 16, 0.945);
+  font-size: 40px;
+  font-weight: 700;
 }
 
 /* Testimonials */
