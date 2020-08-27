@@ -251,7 +251,7 @@ h1.heading {
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-gap: 1.5rem;
-   margin: 40px;
+   margin: 20px;
    height: -webkit-max-content;
    height: -moz-max-content;
    height: max-content;
