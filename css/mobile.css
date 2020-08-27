@@ -7,9 +7,10 @@
   }
 
   /* Nav Bar */
+  .navbar{
+    flex-direction: column;
+  }
   .navbar h1 {
-    float: none;
-    text-align: center;
     padding: 5px;
   }
   .navbar ul,
@@ -20,10 +21,36 @@
     padding: 3px;
     border-bottom: dashed 1px rgba(177, 16, 16, 0.945);
   }
+  .navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .container .nav-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar .container h1{
+    flex: 1;
+  }
+  .nav-list{
+    display: none;
+    width: 100%;
+  }
+  
+  .nav-list.show{
+    display: unset;
+  }
 
-  /* Profile */
+  /* Hamburger Button */
+.hamburger{
+  display: block;
+}
+
+
+/* Profile */
   #profile {
-    height: 400px;
+    height: 90vh;
   }
   #profile .info {
     display: flex;

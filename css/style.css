@@ -36,27 +36,31 @@ p {
 
 /* Utility Classes */
 .container {
-  margin: auto;
-  max-width: 1000px;
+  margin-right: auto;
   overflow: hidden;
   padding: 0 20px;
 }
 .footer-container {
-  margin: auto;
   max-width: 1500px;
   overflow: auto;
 }
 
 /* Nav Bar */
-.navbar {
-  background: #fff;
-  color: rgba(177, 16, 16, 0.945);
-  overflow: auto;
+.header{
   border-style: solid;
   border-top-color: #fff;
   border-left-color: #fff;
   border-right-color: #fff;
   border-bottom-color: rgba(177, 16, 16, 0.945);
+}
+.navbar {
+  background: #fff;
+  color: rgba(177, 16, 16, 0.945);
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .navbar a {
@@ -90,6 +94,47 @@ p {
   color: rgb(255, 0, 0);
 }
 
+/* Hamburger Button */
+.hamburger{
+  display: none;
+  width: 30px;
+  height: 30px;
+  float: right;
+  outline: none;
+  border: none;
+  background: white;
+  margin-right: 5px;
+  transition: all .5s ease-in-out;
+}
+.hamburger-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 3px 0;
+  transition: all .5s ease-in-out;
+}
+.hamburger-box .hamburger-list{
+  display: inline-block;
+  height: 5px;
+  background: rgba(177, 16, 16, 0.945);
+  width: 100%;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.hamburger-box.open .hamburger-list1 {
+  transform: rotate(45deg) translate(3px, 7px);
+}
+.hamburger-box.open .hamburger-list2 {
+  transform: translate(-50px);
+  background: transparent;  
+}
+.hamburger-box.open .hamburger-list3 {
+  transform: rotate(-45deg) translate(6px, -10px);
+}
+
 /* Home Page */
 #profile {
   display: flex;
@@ -119,7 +164,16 @@ p {
 
 #profile h1#main-name {
   color: whitesmoke;
-  animation: fadeIn 4s ease forwards;
+  -webkit-animation: fadeIn 4s ease forwards;
+          animation: fadeIn 4s ease forwards;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn {
   0% {
@@ -135,9 +189,22 @@ p {
   color: #fff;
 }
 #profile .info #field {
-  animation: slidein 3s ease forwards;
+  -webkit-animation: slidein 3s ease forwards;
+          animation: slidein 3s ease forwards;
   opacity: 0;
   overflow: hidden;
+}
+@-webkit-keyframes slidein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    margin-left: 9rem;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes slidein {
   0% {
@@ -161,7 +228,8 @@ p {
   margin: 0 10px;
   cursor: pointer;
   opacity: 0;
-  animation: fadeIn 3s 2.9s ease forwards;
+  -webkit-animation: fadeIn 3s 2.9s ease forwards;
+          animation: fadeIn 3s 2.9s ease forwards;
 }
 #profile a:hover {
   background: rgb(255, 0, 0);
@@ -184,6 +252,8 @@ h1.heading {
    grid-template-columns: 1fr 1fr;
    grid-gap: 1.5rem;
    margin: 40px;
+   height: -webkit-max-content;
+   height: -moz-max-content;
    height: max-content;
 }
 .whatbox{
