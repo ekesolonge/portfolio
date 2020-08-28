@@ -69,17 +69,29 @@ h3 {
   margin: 8px;
   border: 8px solid rgba(177, 16, 16, 0.945);
   border-radius: 50%;
-  animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  -webkit-animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: rgba(177, 16, 16, 0.945) transparent transparent transparent;
 }
 .loader div:nth-child(1) {
-  animation-delay: -0.45s;
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
 }
 .loader div:nth-child(2) {
-  animation-delay: -0.3s;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
 }
 .loader div:nth-child(3) {
-  animation-delay: -0.15s;
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @keyframes loader {
   0% {
@@ -212,7 +224,8 @@ h3 {
   opacity: 0;
   -webkit-animation: fadeIn 4s ease forwards;
   animation: fadeIn 4s ease forwards;
-  animation-delay: 3s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 @-webkit-keyframes fadeIn {
   0% {
@@ -238,7 +251,8 @@ h3 {
 #profile .info #field {
   -webkit-animation: slidein 3s ease forwards;
   animation: slidein 3s ease forwards;
-  animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   opacity: 0;
   overflow: hidden;
 }
@@ -278,7 +292,8 @@ h3 {
   opacity: 0;
   -webkit-animation: fadeIn 3s ease forwards;
   animation: fadeIn 3s ease forwards;
-  animation-delay: 5.9s;
+  -webkit-animation-delay: 5.9s;
+          animation-delay: 5.9s;
 }
 #profile a:hover {
   background: rgb(255, 0, 0);
@@ -619,4 +634,30 @@ textarea {
 .projects .container .box-container .box img:hover {
   opacity: 1;
   width: 216px;
+}
+
+/* Moments Section */
+.moments{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  max-width: 1080px;
+  height: 90vh;
+}
+.masonry .masonry-item{
+  background:url(../img/moments/20200814_153126.jpg) no-repeat center center/cover;
+}
+
+.masonry {
+  display: grid;
+  grid-gap: 1rem;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-areas: 'mas' 'mas' 'mas';
+  
+}
+
+.masonry-item{
+  grid-area: mas;
 }
