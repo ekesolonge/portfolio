@@ -32,6 +32,10 @@ h3 {
 }
 
 /* Utility Classes */
+.landing {
+  opacity: 0;
+  transition: all ease 300ms;
+}
 .container {
   margin-right: auto;
   overflow: hidden;
@@ -42,9 +46,52 @@ h3 {
   margin: 0 auto;
   overflow: auto;
 }
+/* Loader */
+.loader-area {
+  background: rgb(255, 206, 206);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  translate: all ease 300ms;
+}
+.loader-area .loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgba(177, 16, 16, 0.945);
+  border-radius: 50%;
+  animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgba(177, 16, 16, 0.945) transparent transparent transparent;
+}
+.loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* Nav Bar */
-.header{
+.header {
   border-style: solid;
   border-top-color: #fff;
   border-left-color: #fff;
@@ -93,7 +140,7 @@ h3 {
 }
 
 /* Hamburger Button */
-.hamburger{
+.hamburger {
   display: none;
   width: 30px;
   height: 30px;
@@ -102,24 +149,24 @@ h3 {
   border: none;
   background: white;
   margin-right: 5px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.hamburger-box{
+.hamburger-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   width: 100%;
   padding: 3px 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.hamburger-box .hamburger-list{
+.hamburger-box .hamburger-list {
   display: inline-block;
   height: 5px;
   background: rgba(177, 16, 16, 0.945);
   width: 100%;
   border-radius: 5px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .hamburger-box.open .hamburger-list1 {
@@ -127,7 +174,7 @@ h3 {
 }
 .hamburger-box.open .hamburger-list2 {
   transform: translate(-50px);
-  background: transparent;  
+  background: transparent;
 }
 .hamburger-box.open .hamburger-list3 {
   transform: rotate(-45deg) translate(6px, -10px);
@@ -162,8 +209,10 @@ h3 {
 
 #profile h1#main-name {
   color: whitesmoke;
+  opacity: 0;
   -webkit-animation: fadeIn 4s ease forwards;
-          animation: fadeIn 4s ease forwards;
+  animation: fadeIn 4s ease forwards;
+  animation-delay: 3s;
 }
 @-webkit-keyframes fadeIn {
   0% {
@@ -188,7 +237,8 @@ h3 {
 }
 #profile .info #field {
   -webkit-animation: slidein 3s ease forwards;
-          animation: slidein 3s ease forwards;
+  animation: slidein 3s ease forwards;
+  animation-delay: 3s;
   opacity: 0;
   overflow: hidden;
 }
@@ -226,8 +276,9 @@ h3 {
   margin: 0 10px;
   cursor: pointer;
   opacity: 0;
-  -webkit-animation: fadeIn 3s 2.9s ease forwards;
-          animation: fadeIn 3s 2.9s ease forwards;
+  -webkit-animation: fadeIn 3s ease forwards;
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 5.9s;
 }
 #profile a:hover {
   background: rgb(255, 0, 0);
@@ -239,7 +290,7 @@ h3 {
   padding: 20px;
   border-bottom: dotted 1px rgb(255, 0, 0);
 }
-.what-container{
+.what-container {
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -249,75 +300,74 @@ h1.heading {
   font-size: 50px;
   font-weight: 700;
 }
-.whats{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 1.5rem;
-   margin: 20px;
-   height: -webkit-max-content;
-   height: -moz-max-content;
-   height: max-content;
+.whats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin: 20px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
-.whatbox{
+.whatbox {
   background: rgb(255, 124, 146);
   border-radius: 20px;
   text-align: center;
   padding: 2rem;
 }
-.whatbox h2{
+.whatbox h2 {
   font-size: 30px;
   margin: 1rem;
 }
-.whatbox img{
+.whatbox img {
   max-width: 100px;
   margin: 20px;
-  height: auto;  
+  height: auto;
 }
 
 /* Testimonials */
-.testimonials{
+.testimonials {
   background: pink;
   padding: 20px;
 }
-.testimonials-container{
+.testimonials-container {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
-.testimonial-list{
+.testimonial-list {
   margin: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
 }
-.testimonials .item{
+.testimonials .item {
   text-align: center;
 }
-.testimonialall{  
+.testimonialall {
   padding: 3rem;
   background: rgb(255, 124, 146);
   border-radius: 20px;
 }
-.list p{  
+.list p {
   padding-left: 0px;
 }
-.testimonials .item img{
+.testimonials .item img {
   width: 200px;
   border-radius: 50%;
 }
-.testimonials .item ul{
+.testimonials .item ul {
   list-style-type: none;
 }
-.testimonials .item .list{
+.testimonials .item .list {
   margin-bottom: 20px;
 }
-.testimonials .item .list li{
+.testimonials .item .list li {
   display: inline-block;
 }
-.testimonials .item .list li a img{
+.testimonials .item .list li a img {
   width: 14px;
 }
-
 
 /* About */
 #pro {
@@ -325,19 +375,19 @@ h1.heading {
   padding: 20px auto;
   background: pink;
 }
-#pro .info .about p{
+#pro .info .about p {
   padding-left: 20px;
 }
 
 #pro .info-img {
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   float: right;
   width: 50%;
   height: 100%;
 }
-#pro .info-img img{
+#pro .info-img img {
   height: 100%;
   width: 70%;
   border-radius: 50%;
@@ -385,6 +435,7 @@ h1.heading {
 #pro a:hover {
   background: rgb(255, 0, 0);
 }
+
 /* Footer */
 #footer {
   background: rgba(177, 16, 16, 0.945);
@@ -409,6 +460,7 @@ h1.heading {
 
 #contact .social-foot a {
   color: #ffffff;
+  margin: 0 1rem;
 }
 
 #newsletter {
@@ -456,11 +508,11 @@ h1.heading {
 }
 
 /* Contact Page */
-.contact-container{
+.contact-container {
   background: pink;
 }
 .contact-flex {
-  display: flex; 
+  display: flex;
   max-width: 1400px;
   margin: 0 auto;
   padding-top: 100px;
@@ -469,17 +521,17 @@ h1.heading {
 .contact-flex h2 {
   margin-bottom: 40px;
 }
-.socials{
+.socials {
   width: 50%;
 }
-.contact-me{
+.contact-me {
   width: 50%;
 }
 
 .socials-container {
   width: 100%;
 }
-.socials-container h2{
+.socials-container h2 {
   text-align: center;
 }
 .socials a {
@@ -487,6 +539,9 @@ h1.heading {
   margin: 0 auto;
   width: 250px;
   margin-top: 20px;
+}
+.socials a:hover {
+  color: rgba(177, 16, 16, 0.945);
 }
 
 .contact-me {
@@ -550,7 +605,7 @@ textarea {
   width: 320px;
   margin: 20px 0px;
 }
-.projects .container .box-container .box h5{
+.projects .container .box-container .box h5 {
   margin-bottom: 0.5rem;
 }
 .projects .container .box-container .box a:hover {
