@@ -515,7 +515,7 @@ margin-right: 20px;
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding: 3rem;
   justify-content: space-around;
 }
 .contact-flex h2 {
@@ -623,9 +623,15 @@ textarea {
 
 /* Moments Section */
 .moments{
+  background: pink;
+  padding: 1.5em;
+}
+.moments-container{
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.5em;
+  background: rgb(255, 124, 146);
+  border-radius: 20px;
 }
 
 .masonry {
@@ -634,30 +640,13 @@ textarea {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .items{
-  padding: 4rem;
-  background: silver;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
 }
-/* .item-3{
-  grid-area: item-3;
+.items img{
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  margin: auto;
 }
-.item-4{
-  grid-area: item-4;
-}
-.item-5{
-  grid-area: item-5;
-}
-.item-1{
-  grid-area: item-1;
-}
-.item-1{
-  grid-area: item-1;
-}
-.item-1{
-  grid-area: item-1;
-}
-.item-1{
-  grid-area: item-1;
-}
-.item-1{
-  grid-area: item-1;
-} */
