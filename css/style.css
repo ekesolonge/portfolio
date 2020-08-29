@@ -389,8 +389,10 @@ h1.heading {
   height: 90vh;
   padding: 20px auto;
   background: pink;
+  line-height: 1.6;
 }
 #pro .info .about p {
+  font-size: 17px;
   padding-left: 20px;
 }
 
@@ -416,11 +418,15 @@ h1.heading {
 }
 
 #pro .info ul {
-  padding-left: 40px;
+  padding-left: 20px;
+  font-size: 18px;
+  list-style: none;
 }
-
+#pro .info ul li i{
+margin-right: 20px;
+}
 #pro h1 {
-  margin-top: 100px;
+  margin-top: 20px;
   font-size: 50px;
   font-weight: 700;
 }
@@ -429,27 +435,6 @@ h1.heading {
   color: rgba(177, 16, 16, 0.945);
 }
 
-#info {
-  float: left;
-}
-#info ul {
-  margin-left: 40px;
-}
-
-#pro a {
-  background: #fff;
-  color: #fff;
-  background: rgba(177, 16, 16, 0.945);
-  outline: none;
-  border: none;
-  border-radius: 2px;
-  padding: 10px;
-  margin-left: 20px;
-  cursor: pointer;
-}
-#pro a:hover {
-  background: rgb(255, 0, 0);
-}
 
 /* Footer */
 #footer {
@@ -638,26 +623,41 @@ textarea {
 
 /* Moments Section */
 .moments{
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 1.5em;
-  padding-right: 1.5em;
-  padding-left: 1.5em;
-  max-width: 1080px;
-  height: 90vh;
-}
-.masonry .masonry-item{
-  background:url(../img/moments/20200814_153126.jpg) no-repeat center center/cover;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5em;
 }
 
 .masonry {
   display: grid;
   grid-gap: 1rem;
-  /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-areas: 'mas' 'mas' 'mas';
-  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
-.masonry-item{
-  grid-area: mas;
+.items{
+  padding: 4rem;
+  background: silver;
 }
+/* .item-3{
+  grid-area: item-3;
+}
+.item-4{
+  grid-area: item-4;
+}
+.item-5{
+  grid-area: item-5;
+}
+.item-1{
+  grid-area: item-1;
+}
+.item-1{
+  grid-area: item-1;
+}
+.item-1{
+  grid-area: item-1;
+}
+.item-1{
+  grid-area: item-1;
+}
+.item-1{
+  grid-area: item-1;
+} */
