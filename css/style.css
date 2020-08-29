@@ -626,6 +626,11 @@ textarea {
 }
 
 /* Moments Section */
+.moments h1#main-name {
+  color: rgba(177, 16, 16, 0.945);
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .moments {
   background: pink;
   padding: 1.5em;
