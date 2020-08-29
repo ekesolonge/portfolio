@@ -20,7 +20,7 @@ window.addEventListener("load", function (e) {
   const landing = document.querySelector(".landing");
   if (e.target.readyState === "complete") {
     setTimeout(function () {
-      loader.style.opacity = "0";
+      loader.style.opacity = 0;
       loader.style.display = "none";
       setTimeout(function () {
         landing.style.opacity = "1";
