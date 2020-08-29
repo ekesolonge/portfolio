@@ -70,20 +70,20 @@ h3 {
   border: 8px solid rgba(177, 16, 16, 0.945);
   border-radius: 50%;
   -webkit-animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-          animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: rgba(177, 16, 16, 0.945) transparent transparent transparent;
 }
 .loader div:nth-child(1) {
   -webkit-animation-delay: -0.45s;
-          animation-delay: -0.45s;
+  animation-delay: -0.45s;
 }
 .loader div:nth-child(2) {
   -webkit-animation-delay: -0.3s;
-          animation-delay: -0.3s;
+  animation-delay: -0.3s;
 }
 .loader div:nth-child(3) {
   -webkit-animation-delay: -0.15s;
-          animation-delay: -0.15s;
+  animation-delay: -0.15s;
 }
 @-webkit-keyframes loader {
   0% {
@@ -225,7 +225,7 @@ h3 {
   -webkit-animation: fadeIn 4s ease forwards;
   animation: fadeIn 4s ease forwards;
   -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  animation-delay: 4s;
 }
 @-webkit-keyframes fadeIn {
   0% {
@@ -252,7 +252,7 @@ h3 {
   -webkit-animation: slidein 3s ease forwards;
   animation: slidein 3s ease forwards;
   -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
   opacity: 0;
   overflow: hidden;
 }
@@ -293,7 +293,7 @@ h3 {
   -webkit-animation: fadeIn 3s ease forwards;
   animation: fadeIn 3s ease forwards;
   -webkit-animation-delay: 5.9s;
-          animation-delay: 5.9s;
+  animation-delay: 5.9s;
 }
 #profile a:hover {
   background: rgb(255, 0, 0);
@@ -422,8 +422,8 @@ h1.heading {
   font-size: 18px;
   list-style: none;
 }
-#pro .info ul li i{
-margin-right: 20px;
+#pro .info ul li i {
+  margin-right: 20px;
 }
 #pro h1 {
   margin-top: 20px;
@@ -434,7 +434,6 @@ margin-right: 20px;
 #pro h1#main-name {
   color: rgba(177, 16, 16, 0.945);
 }
-
 
 /* Footer */
 #footer {
@@ -604,6 +603,8 @@ textarea {
   text-align: center;
   width: 320px;
   margin: 20px 0px;
+  opacity: 0.7;
+  transition: all 0.4s ease;
 }
 .projects .container .box-container .box h5 {
   margin-bottom: 0.5rem;
@@ -613,20 +614,18 @@ textarea {
 }
 .projects .container .box-container .box img {
   width: 200px;
-  transition: all 0.4s ease;
-  opacity: 0.7;
 }
-.projects .container .box-container .box img:hover {
+.projects .container .box-container .box:hover {
   opacity: 1;
-  width: 216px;
+  transform: scale(1.1);
 }
 
 /* Moments Section */
-.moments{
+.moments {
   background: pink;
   padding: 1.5em;
 }
-.moments-container{
+.moments-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 1.5em;
@@ -639,12 +638,12 @@ textarea {
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.items{
+.items {
   border-radius: 5px;
   overflow: hidden;
   display: flex;
 }
-.items img{
+.items img {
   display: block;
   width: 100%;
   border-radius: 15px;
