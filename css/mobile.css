@@ -219,6 +219,13 @@
 
   /* Masonry */
   .masonry{
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(166px, 1fr));
+  }
+}
+
+@media (max-width:600px){
+  .masonry{
+    display: flex;
+    flex-wrap: wrap;
   }
 }
