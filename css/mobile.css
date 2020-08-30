@@ -217,12 +217,9 @@
     grid-gap: 3rem;
   }
 
-  /* Masonry */
-  .masonry{
-    grid-template-columns: repeat(auto-fit, minmax(166px, 1fr));
-  }
 }
 
+/* Masonry */
 @media (max-width:600px){
   .masonry{
     display: flex;
