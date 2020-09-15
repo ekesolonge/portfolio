@@ -462,8 +462,19 @@ h1.heading {
 }
 
 #contact .social-foot a {
+  display: inline-block;
+  border-radius: 50%;
   color: #ffffff;
+  margin: 0 0.5rem;
+  padding: 10px;
+  transition: all ease 300ms;
+}
+
+#contact .social-foot a:hover {
+  background: #ffffff;
+  color: rgba(177, 16, 16, 0.945);
   margin: 0 1rem;
+  transition: all ease 300ms;
 }
 
 #newsletter {
@@ -605,13 +616,14 @@ textarea {
 }
 .projects .container .box-container .box {
   text-align: center;
-  width: 320px;
-  margin: 20px 0px;
+  width: 300px;
+  margin: 20px 10px;
   opacity: 0.7;
   transition: all 0.4s ease;
 }
 .projects .container .box-container .box h5 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
 }
 .projects .container .box-container .box a:hover {
   color: rgba(177, 16, 16, 0.945);
@@ -621,7 +633,11 @@ textarea {
 }
 .projects .container .box-container .box:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.18);
+}
+
+.projects .container .box-container .box .link a {
+  margin: 0 0.5rem;
 }
 
 /* Moments Section */
