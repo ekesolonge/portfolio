@@ -385,9 +385,8 @@ h1.heading {
 }
 
 /* About */
-.about-container{
+.about-container {
   background: pink;
-  
 }
 #pro {
   height: 95vh;
@@ -656,22 +655,22 @@ textarea {
 .items img {
   display: block;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 15px;
   margin: auto;
 }
-.first-item{
-  grid-column: 2/span 2;
+.first-item {
+  grid-column: 2 / span 2;
 }
-.third-item{
-  grid-column: 2/span 2;
+.third-item {
+  grid-column: 2 / span 2;
 }
-.second-item{
-  grid-row: 1/ span 2;
+.second-item {
+  grid-row: 1 / span 2;
 }
-.sixth-item{
+.sixth-item {
   grid-column: 2;
-  grid-row: 3/ span 2;
+  grid-row: 3 / span 2;
 }
