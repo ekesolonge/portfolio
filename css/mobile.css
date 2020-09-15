@@ -11,6 +11,12 @@
   }
 
   /* Nav Bar */
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
   .navbar {
     flex-direction: column;
   }
@@ -216,12 +222,11 @@
     grid-template-columns: 1fr;
     grid-gap: 3rem;
   }
-
 }
 
 /* Masonry */
-@media (max-width:600px){
-  .masonry{
+@media (max-width: 600px) {
+  .masonry {
     display: flex;
     flex-wrap: wrap;
     grid-gap: 0.7rem;
