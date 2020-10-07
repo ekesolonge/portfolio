@@ -130,6 +130,10 @@
   }
 
   /* About */
+  .about-container {
+    background: pink;
+    height: unset;
+  }
   #pro {
     display: flex;
     flex-direction: column;
@@ -228,8 +232,8 @@
   }
 }
 
-/* Masonry */
 @media (max-width: 600px) {
+  /* Masonry */
   .masonry {
     display: flex;
     flex-wrap: wrap;
@@ -237,5 +241,22 @@
   }
   .moments-container {
     padding: 0.7em;
+  }
+
+  /* Stats */
+  .stats-container {
+    flex-direction: column;
+  }
+
+  .stats .stat-item {
+    padding: 1rem;
+    padding-top: 0;
+    width: 100%;
+    margin: 1rem 0;
+    border-bottom: solid 1px rgba(141, 0, 0, 0.308);
+  }
+
+  .stats .stat-item:last-child {
+    border-bottom: none;
   }
 }

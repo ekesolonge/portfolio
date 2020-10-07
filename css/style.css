@@ -59,6 +59,7 @@ h3 {
   position: fixed;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 .loader div {
   box-sizing: border-box;
@@ -328,8 +329,9 @@ h1.heading {
   background: rgb(255, 124, 146);
   border-radius: 20px;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
+
 .whatbox h2 {
   font-size: 30px;
   margin: 1rem;
@@ -338,6 +340,42 @@ h1.heading {
   max-width: 100px;
   margin: 20px;
   height: auto;
+}
+
+/* Stats */
+.stats {
+  padding: 20px;
+  background: pink;
+  border-bottom: dotted 1px rgb(255, 0, 0);
+}
+
+.stats-container {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stats .stat-item {
+  text-align: center;
+  width: calc(100% / 3);
+}
+
+.stats .stat-item h1 {
+  color: rgba(177, 16, 16, 0.945);
+  font-size: 3rem;
+  margin: 5px;
+}
+
+.stats .stat-item i {
+  font-size: 4rem;
+  color: rgb(230, 82, 107);
+}
+
+.stats .stat-item p {
+  font-size: 1.2rem;
 }
 
 /* Testimonials */
@@ -387,6 +425,7 @@ h1.heading {
 /* About */
 .about-container {
   background: pink;
+  height: 117vh;
 }
 #pro {
   background: pink;
