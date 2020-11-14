@@ -13,18 +13,3 @@ hamburger.addEventListener("click", () => {
     menuOpen = false;
   }
 });
-
-// Loader
-window.addEventListener("load", function (e) {
-  const loader = document.querySelector(".loader-area");
-  const landing = document.querySelector(".landing");
-  if (e.target.readyState === "complete") {
-    setTimeout(function () {
-      loader.style.opacity = 0;
-      loader.style.display = "none";
-      setTimeout(function () {
-        landing.style.opacity = "1";
-      }, 0);
-    }, 3000);
-  }
-});

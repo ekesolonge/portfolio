@@ -371,7 +371,7 @@ h1.heading {
 
 .stats .stat-item i {
   font-size: 4rem;
-  color: rgb(230, 82, 107);
+  color: rgba(177, 16, 16, 0.945);
 }
 
 .stats .stat-item p {
@@ -425,6 +425,8 @@ h1.heading {
 /* About */
 .about-container {
   background: pink;
+  padding: 2rem 0;
+  min-height: calc(100vh - 208px);
 }
 #pro {
   display: flex;
@@ -566,6 +568,7 @@ h1.heading {
 .contact-flex {
   display: flex;
   max-width: 1400px;
+  min-height: calc(100vh - 208px);
   margin: 0 auto;
   padding: 3rem;
   justify-content: space-around;
@@ -630,7 +633,8 @@ textarea {
 /* Projects Section */
 .projects {
   background: pink;
-  height: 90vh;
+  padding: 2rem;
+  min-height: calc(100vh - 208px);
 }
 .projects .container {
   height: 100%;
@@ -649,7 +653,6 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
   height: 90%;
 }
 .projects .container .box-container .box {
@@ -661,7 +664,6 @@ textarea {
 }
 .projects .container .box-container .box h5 {
   margin-bottom: 1rem;
-  font-size: 18px;
 }
 .projects .container .box-container .box a:hover {
   color: rgba(177, 16, 16, 0.945);
@@ -672,6 +674,10 @@ textarea {
 .projects .container .box-container .box:hover {
   opacity: 1;
   transform: scale(1.18);
+}
+
+.projects .container .box-container .box .link {
+  margin: 10px 0;
 }
 
 .projects .container .box-container .box .link a {
@@ -687,6 +693,7 @@ textarea {
 }
 .moments {
   background: pink;
+  min-height: calc(100vh - 208px);
   padding: 1.5em;
 }
 .moments-container {

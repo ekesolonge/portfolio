@@ -46,13 +46,13 @@
   .nav-list {
     height: 0;
     overflow: hidden;
-    transition: all 1.2s ease;
+    transition: all 0.6s ease;
     width: 100%;
   }
 
   .nav-list.show {
     height: 139px;
-    transition: all 1.2s ease;
+    transition: all 0.6s ease;
   }
 
   /* Hamburger Button */
@@ -178,9 +178,6 @@
     width: 85%;
   }
   /* Projects Section */
-  .projects {
-    height: unset;
-  }
   .projects .container {
     padding: 20px auto;
   }
