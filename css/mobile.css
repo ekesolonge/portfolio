@@ -51,7 +51,7 @@
   }
 
   .nav-list.show {
-    height: 139px;
+    height: 111px;
     transition: all 0.6s ease;
   }
 
@@ -178,14 +178,15 @@
     width: 85%;
   }
   /* Projects Section */
+  .projects {
+    padding: 1rem;
+  }
+
   .projects .container {
     padding: 20px auto;
   }
   .projects .container h1#main-name {
     margin-top: 0px;
-  }
-  .projects .container {
-    text-align: center;
   }
 
   /*  What I do */
