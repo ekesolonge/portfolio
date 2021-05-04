@@ -221,16 +221,6 @@
 }
 
 @media (max-width: 600px) {
-  /* Masonry */
-  .masonry {
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 0.7rem;
-  }
-  .moments-container {
-    padding: 0.7em;
-  }
-
   /* Stats */
   .stats-container {
     flex-direction: column;

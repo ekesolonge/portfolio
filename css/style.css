@@ -45,6 +45,10 @@ h3 {
   max-width: 1400px;
   margin: 0 auto;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /* Loader */
 .loader-area {
@@ -53,7 +57,7 @@ h3 {
   width: 100%;
   height: 100%;
   z-index: 2;
-  translate: all ease 300ms;
+  transition: all ease 300ms;
 }
 .loader-area .loader {
   position: fixed;
@@ -457,7 +461,7 @@ h1.heading {
 }
 #pro .info-img img {
   max-width: 400px;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 
 #pro .info ul {
@@ -484,11 +488,6 @@ h1.heading {
   background: rgba(177, 16, 16, 0.945);
   color: #fff;
   padding: 10px;
-}
-
-#contact {
-  float: left;
-  width: 50%;
 }
 
 .social-foot {
@@ -539,20 +538,36 @@ h1.heading {
   margin: auto;
   text-align: center;
   white-space: nowrap;
+  background: rgba(117, 6, 6, 0.527);
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+}
+
+#newsletter button:focus,
+#newsletter button:active {
+  background: none;
+  color: #fff;
+  outline: none;
+  border: none;
 }
 
 #newsletter input {
   padding: 10px;
   margin-left: 20px;
-}
-
-#newsletter input[type="submit"] {
-  background: #fff;
+  background: none;
+  color: #fff;
   outline: none;
   border: none;
-  border-radius: 2px;
 }
-#newsletter input[type="submit"]:hover {
+
+#newsletter button {
+  background: none;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+#newsletter button:hover {
   color: rgb(255, 0, 0);
 }
 
@@ -564,13 +579,13 @@ h1.heading {
 /* Contact Page */
 .contact-container {
   background: pink;
+  min-height: calc(100vh - 148.8px);
+  padding: 3rem;
 }
 .contact-flex {
   display: flex;
   max-width: 1400px;
-  min-height: calc(100vh - 208px);
   margin: 0 auto;
-  padding: 3rem;
   justify-content: space-around;
 }
 .contact-flex h2 {
@@ -612,29 +627,31 @@ h1.heading {
 textarea {
   padding: 10px;
   width: 80%;
-  border-radius: 3px;
+  border-radius: 6px;
   border: solid 1px #ddd;
 }
 .submit {
   background: rgba(177, 16, 16, 0.945);
   padding: 15px 0px;
-  width: 30%;
+  width: 100px;
   border: 0;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+  transition: all ease 0.4s;
 }
 .submit:hover {
-  background: rgb(255, 0, 0);
+  background: rgb(116, 9, 9);
+  transition: all ease 0.4s;
 }
 
 /* Projects Section */
 .projects {
   background: pink;
   padding: 2rem;
-  min-height: calc(100vh - 208px);
+  min-height: calc(100vh - 148.8px);
 }
 .projects .container {
   height: 100%;
@@ -656,28 +673,47 @@ textarea {
   height: 90%;
 }
 .projects .container .box-container .box {
-  text-align: center;
-  width: 300px;
-  margin: 20px 10px;
-  opacity: 0.7;
-  transition: all 0.4s ease;
+  width: 15rem;
+  margin: 1rem;
+  background: rgba(255, 124, 146, 0.726);
+  border-radius: 5px;
 }
-.projects .container .box-container .box h5 {
-  margin-bottom: 1rem;
+.projects .container .box-container .box .box-body {
+  height: calc(100% - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.7rem;
 }
-.projects .container .box-container .box a:hover {
-  color: rgba(177, 16, 16, 0.945);
+
+.projects .container .box-container .box h4 {
+  margin: 0.5rem 0;
 }
+
 .projects .container .box-container .box img {
-  width: 200px;
+  width: 100%;
+  height: 130px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
-.projects .container .box-container .box:hover {
-  opacity: 1;
-  transform: scale(1.18);
+.projects .container .box-container .box .tags {
+  margin: 10px 0;
+}
+
+.projects .container .box-container .box .tags p {
+  display: inline-block;
+  margin: 2px 0;
+  border: 1px solid rgba(177, 16, 16, 0.945);
+  color: rgba(177, 16, 16, 0.945);
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 5px;
 }
 
 .projects .container .box-container .box .link {
   margin: 10px 0;
+  display: flex;
 }
 
 .projects .container .box-container .box .link a {
@@ -685,54 +721,6 @@ textarea {
   font-size: 20px;
 }
 
-/* Moments Section */
-.moments h1#main-name {
+.projects .container .box-container .box .link a:hover {
   color: rgba(177, 16, 16, 0.945);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.moments {
-  background: pink;
-  min-height: calc(100vh - 208px);
-  padding: 1.5em;
-}
-.moments-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1em;
-  background: rgb(255, 124, 146);
-  border-radius: 20px;
-}
-
-.masonry {
-  display: grid;
-  grid-gap: 1rem;
-  grid-auto-rows: 300px;
-}
-.items {
-  border-radius: 5px;
-  overflow: hidden;
-  display: flex;
-}
-.items img {
-  display: block;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  margin: auto;
-}
-.first-item {
-  grid-column: 2 / span 2;
-}
-.third-item {
-  grid-column: 2 / span 2;
-}
-.second-item {
-  grid-row: 1 / span 2;
-}
-.sixth-item {
-  grid-column: 2;
-  grid-row: 3 / span 2;
 }
